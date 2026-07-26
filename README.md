@@ -1,5 +1,7 @@
 # CODING AGENTS: READ THIS FIRST
 
+**Live site:** https://rumanddd.github.io/Alejandros_Restaurant_Redesign/ (served from `docs/`, GitHub Pages)
+
 This is a **handoff bundle** from Claude Design (claude.ai/design).
 
 A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
@@ -22,4 +24,5 @@ The design medium is **HTML/CSS/JS** — these are prototypes, not production co
 
 - `README.md` — this file
 - `chats/` — conversation transcripts (read these!)
-- `project/` — the `Alejandro's Restaurant Redesign` project files (HTML prototypes, assets, components)
+- `project/` — the `Alejandro's Restaurant Redesign` project files (HTML prototypes, assets, components) — original Claude Design export, untouched
+- `docs/` — deployable copy of the site served by GitHub Pages. `Home.dc.html` is renamed to `index.html` here (with matching nav-link fixes) so it works as the Pages entry point; a `.nojekyll` marker stops Jekyll from mangling the `{{ }}` client-side template syntax or stripping the dotfile the hero images depend on
