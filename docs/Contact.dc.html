@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Reserve a Table — Alejandro's Bar &amp; Restaurant, La Zenia</title>
+<meta name="description" content="Book your table at Alejandro's Bar &amp; Restaurant in La Zenia. Call, WhatsApp, or send a reservation request online — family-run since 1999." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  body { margin: 0; background: #FBF6EE; -webkit-font-smoothing: antialiased; }
+  a { color: #9F3F22; text-decoration: none; }
+  a:hover { color: #C1502E; }
+  * { box-sizing: border-box; }
+  input, select, textarea { font-family: 'Manrope', sans-serif; transition: border-color 0.2s ease; }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: #C1502E !important; }
+  input::placeholder, textarea::placeholder { color: #A69A88; }
+</style>
+</helmet>
+
+<div style="font-family: 'Manrope', sans-serif; color: #2A211A; background: #FBF6EE; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(251,246,238,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(42,33,26,0.1); padding: clamp(10px,2vw,16px) clamp(16px,4vw,48px); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+    <a href="index.html" style="display: flex; flex-direction: column; line-height: 1; color: #2A211A;">
+      <span style="font-family: 'Piazzolla', serif; font-size: clamp(20px,2.4vw,26px); font-weight: 600; letter-spacing: 0.5px;">Alejandro's</span>
+      <span style="font-size: 10px; letter-spacing: 2.5px; color: #B8923F; margin-top: 2px;">EST. 1999 · LA ZENIA</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: clamp(14px,2vw,28px); flex-wrap: wrap; font-size: 14px; font-weight: 600;">
+      <a href="index.html" style="color: #2A211A;">{{ t.nav.home }}</a>
+      <a href="About.dc.html" style="color: #2A211A;">{{ t.nav.about }}</a>
+      <a href="Menu.dc.html" style="color: #2A211A;">{{ t.nav.menu }}</a>
+      <a href="Contact.dc.html" style="color: #9F3F22;">{{ t.nav.contact }}</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button onClick="{{ toggleLang }}" style="border: 1px solid rgba(42,33,26,0.2); background: transparent; border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #2A211A; cursor: pointer;">{{ otherLang }}</button>
+      <a href="tel:+34966760623" aria-label="Call Alejandro's" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(42,33,26,0.18); display: flex; align-items: center; justify-content: center; color: #2A211A;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="Contact.dc.html" style="background: #C1502E; color: #FFF8EF; padding: 11px 22px; border-radius: 999px; font-size: 14px; font-weight: 700; white-space: nowrap;">{{ t.nav.reserve }}</a>
+    </div>
+  </header>
+
+  <section style="padding: clamp(48px,7vw,80px) clamp(16px,4vw,48px) clamp(24px,4vw,36px); max-width: 900px; margin: 0 auto; text-align: center;">
+    <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 14px; animation: fadeUp 0.6s ease both;">{{ t.tag }}</p>
+    <h1 style="font-family: 'Piazzolla', serif; font-size: clamp(32px,5vw,54px); font-weight: 500; margin: 0 0 18px; animation: fadeUp 0.7s ease 0.05s both;">{{ t.heading }}</h1>
+    <p style="color: #6B5D4F; font-size: 16px; line-height: 1.7; margin: 0; animation: fadeUp 0.7s ease 0.1s both;">{{ t.sub }}</p>
+  </section>
+
+  <section style="padding: clamp(24px,4vw,40px) clamp(16px,4vw,48px) clamp(56px,8vw,100px); max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap: clamp(28px,4vw,48px); align-items: start;">
+
+    <div style="background: #FFFFFF; border-radius: 20px; padding: clamp(24px,4vw,40px); box-shadow: 0 20px 50px rgba(42,33,26,0.08); animation: fadeUp 0.7s ease both;">
+      <sc-if value="{{ !submitted }}" hint-placeholder-val="{{ true }}">
+        <h2 style="font-family: 'Piazzolla', serif; font-size: 24px; font-weight: 600; margin: 0 0 24px;">{{ t.formHeading }}</h2>
+        <form onSubmit="{{ handleSubmit }}" style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px;">
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #6B5D4F;">{{ t.form.name }}
+              <input required="" type="text" value="{{ fields.name }}" onChange="{{ makeFieldHandler('name') }}" placeholder="{{ t.form.namePh }}" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(42,33,26,0.18); font-size: 15px;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #6B5D4F;">{{ t.form.phone }}
+              <input required="" type="tel" value="{{ fields.phone }}" onChange="{{ makeFieldHandler('phone') }}" placeholder="+34 ..." style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(42,33,26,0.18); font-size: 15px;" />
+            </label>
+          </div>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #6B5D4F;">{{ t.form.email }}
+            <input type="email" value="{{ fields.email }}" onChange="{{ makeFieldHandler('email') }}" placeholder="you@email.com" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(42,33,26,0.18); font-size: 15px;" />
+          </label>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 16px;">
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #6B5D4F;">{{ t.form.date }}
+              <input required="" type="date" value="{{ fields.date }}" onChange="{{ makeFieldHandler('date') }}" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(42,33,26,0.18); font-size: 15px;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #6B5D4F;">{{ t.form.time }}
+              <input required="" type="time" value="{{ fields.time }}" onChange="{{ makeFieldHandler('time') }}" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(42,33,26,0.18); font-size: 15px;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #6B5D4F;">{{ t.form.guests }}
+              <select value="{{ fields.guests }}" onChange="{{ makeFieldHandler('guests') }}" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(42,33,26,0.18); font-size: 15px; background: #FFF;">
+                <sc-for list="{{ guestOptions }}" as="n" hint-placeholder-count="8">
+                  <option value="{{ n }}">{{ n }}</option>
+                </sc-for>
+              </select>
+            </label>
+          </div>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #6B5D4F;">{{ t.form.notes }}
+            <textarea rows="3" value="{{ fields.notes }}" onChange="{{ makeFieldHandler('notes') }}" placeholder="{{ t.form.notesPh }}" style="padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(42,33,26,0.18); font-size: 15px; resize: vertical;"></textarea>
+          </label>
+          <button type="submit" style="margin-top: 6px; background: #C1502E; color: #FFF8EF; padding: 15px; border: none; border-radius: 999px; font-weight: 700; font-size: 15px; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease;" style-hover="transform: translateY(-2px); background: #9F3F22;">{{ t.form.submit }}</button>
+          <p style="font-size: 12.5px; color: #A69A88; margin: 0; text-align: center;">{{ t.form.disclaimer }}</p>
+        </form>
+      </sc-if>
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align: center; padding: 30px 10px;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: #4B5A3A; color: #FBF6EE; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 26px;">✓</div>
+          <h2 style="font-family: 'Piazzolla', serif; font-size: 24px; font-weight: 600; margin: 0 0 12px;">{{ t.form.successHeading }}</h2>
+          <p style="color: #6B5D4F; font-size: 15px; line-height: 1.7; margin: 0;">{{ t.form.successBody }}</p>
+        </div>
+      </sc-if>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 22px;">
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; animation: fadeUp 0.7s ease 0.1s both;">
+        <a href="tel:+34966760623" style="flex: 1; min-width: 160px; display: flex; align-items: center; justify-content: center; gap: 8px; background: #2A211A; color: #FBF6EE; padding: 16px; border-radius: 14px; font-weight: 700; font-size: 14.5px; transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">{{ t.callBtn }}</a>
+        <a href="https://wa.me/34966760623" target="_blank" rel="noopener" style="flex: 1; min-width: 160px; display: flex; align-items: center; justify-content: center; gap: 8px; background: #4B5A3A; color: #FBF6EE; padding: 16px; border-radius: 14px; font-weight: 700; font-size: 14.5px; transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">{{ t.whatsappBtn }}</a>
+      </div>
+      <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; border: 1px solid rgba(42,33,26,0.1);">
+        <iframe title="Map to Alejandro's" src="https://maps-api-ssl.google.com/maps?hl=en-US&amp;ll=37.925771,-0.729696&amp;output=embed&amp;q=37.925824,-0.729859&amp;z=17" style="width: 100%; height: 100%; border: 0;" loading="lazy"></iframe>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 16px; padding: 24px; box-shadow: 0 18px 40px rgba(42,33,26,0.06);">
+        <h3 style="font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #B8923F; margin: 0 0 14px;">{{ t.addressTitle }}</h3>
+        <p style="font-size: 16px; line-height: 1.6; margin: 0 0 4px;">Ctra. de Villamartín, 2</p>
+        <p style="font-size: 16px; line-height: 1.6; margin: 0 0 18px; color: #6B5D4F;">La Zenia, 03189 Orihuela, Alicante</p>
+        <h3 style="font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #B8923F; margin: 0 0 14px;">{{ t.hoursTitle }}</h3>
+        <sc-for list="{{ t.hours }}" as="row" hint-placeholder-count="3">
+          <div style="display: flex; justify-content: space-between; gap: 16px; padding: 7px 0; border-bottom: 1px solid rgba(42,33,26,0.08); font-size: 14.5px;">
+            <span style="font-weight: 600;">{{ row.d }}</span>
+            <span style="color: #6B5D4F; text-align: right;">{{ row.h }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #1E1712; color: #E9DFC9; padding: clamp(48px,7vw,80px) clamp(16px,4vw,48px) 28px;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(233,223,201,0.14);">
+      <div>
+        <span style="font-family: 'Piazzolla', serif; font-size: 24px; font-weight: 600;">Alejandro's</span>
+        <p style="font-size: 14px; line-height: 1.7; color: rgba(233,223,201,0.65); margin: 14px 0 0; max-width: 260px;">{{ t.footer.tag }}</p>
+        <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <a href="https://facebook.com/alejandros1999" target="_blank" rel="noopener" aria-label="Facebook" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(233,223,201,0.24); display: flex; align-items: center; justify-content: center; color: #E9DFC9;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alejandrosrestaurant" target="_blank" rel="noopener" aria-label="Instagram" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(233,223,201,0.24); display: flex; align-items: center; justify-content: center; color: #E9DFC9;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.nav }}</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+          <a href="index.html" style="color: #E9DFC9;">{{ t.nav.home }}</a>
+          <a href="About.dc.html" style="color: #E9DFC9;">{{ t.nav.about }}</a>
+          <a href="Menu.dc.html" style="color: #E9DFC9;">{{ t.nav.menu }}</a>
+          <a href="Contact.dc.html" style="color: #E9DFC9;">{{ t.nav.contact }}</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.visit }}</h4>
+        <p style="font-size: 14px; line-height: 1.8; color: rgba(233,223,201,0.75); margin: 0;">Ctra. de Villamartín, 2<br />La Zenia, 03189 Orihuela<br />+34 966 760 623<br />alejandros@gmx.net</p>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.follow }}</h4>
+        <p style="font-size: 14px; color: rgba(233,223,201,0.75); margin: 0;">@alejandrosrestaurant</p>
+      </div>
+    </div>
+    <div style="max-width: 1280px; margin: 0 auto; padding-top: 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: rgba(233,223,201,0.5);">
+      <span>© 2026 Alejandro's Bar &amp; Restaurant. {{ t.footer.rights }}</span>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    lang: 'en', submitted: false,
+    fields: { name: '', email: '', phone: '', date: '', time: '', guests: 2, notes: '' }
+  };
+
+  data = {
+    en: {
+      nav: { home: 'Home', about: 'Our Story', menu: 'Menu', contact: 'Contact', reserve: 'Reserve' },
+      tag: 'BOOK YOUR TABLE', heading: 'Reserve Your Table',
+      sub: "Send a request, call, or message us on WhatsApp — however's easiest, we'll have your table ready.",
+      formHeading: 'Request a Reservation',
+      form: {
+        name: 'Full Name', namePh: 'Your name', email: 'Email', phone: 'Phone Number',
+        date: 'Date', time: 'Time', guests: 'Guests', notes: 'Notes (optional)',
+        notesPh: 'Allergies, special occasion, seating preference…',
+        submit: 'Send Reservation Request',
+        disclaimer: "This sends a request only — we'll confirm by phone or email shortly after.",
+        successHeading: 'Request Sent!', successBody: "Thank you — we've received your reservation request and will confirm shortly by phone or email. For same-day bookings, please call us directly."
+      },
+      callBtn: 'Call Now', whatsappBtn: 'WhatsApp Us',
+      addressTitle: 'Address', hoursTitle: 'Opening Hours',
+      hours: [
+        { d: 'Monday – Thursday', h: '9:00 – 23:00' },
+        { d: 'Friday – Saturday', h: '9:00 – 00:00 · Live music from 21:30' },
+        { d: 'Sunday', h: '9:00 – 23:00 · Sunday Roast' }
+      ],
+      footer: { tag: 'Family-run on the La Zenia roundabout since 1999.', nav: 'Explore', visit: 'Visit Us', follow: 'Follow Along', rights: 'All rights reserved.' }
+    },
+    es: {
+      nav: { home: 'Inicio', about: 'Nuestra Historia', menu: 'Carta', contact: 'Contacto', reserve: 'Reservar' },
+      tag: 'RESERVA TU MESA', heading: 'Reserva Tu Mesa',
+      sub: 'Envía una solicitud, llama o escríbenos por WhatsApp — como prefieras, tendremos tu mesa lista.',
+      formHeading: 'Solicitar una Reserva',
+      form: {
+        name: 'Nombre Completo', namePh: 'Tu nombre', email: 'Correo Electrónico', phone: 'Teléfono',
+        date: 'Fecha', time: 'Hora', guests: 'Comensales', notes: 'Notas (opcional)',
+        notesPh: 'Alergias, ocasión especial, preferencia de mesa…',
+        submit: 'Enviar Solicitud de Reserva',
+        disclaimer: 'Esto solo envía una solicitud — confirmaremos por teléfono o correo poco después.',
+        successHeading: '¡Solicitud Enviada!', successBody: 'Gracias — hemos recibido tu solicitud de reserva y la confirmaremos pronto por teléfono o correo. Para reservas el mismo día, llámanos directamente.'
+      },
+      callBtn: 'Llamar Ahora', whatsappBtn: 'Escríbenos por WhatsApp',
+      addressTitle: 'Dirección', hoursTitle: 'Horario',
+      hours: [
+        { d: 'Lunes – Jueves', h: '9:00 – 23:00' },
+        { d: 'Viernes – Sábado', h: '9:00 – 00:00 · Música en vivo desde las 21:30' },
+        { d: 'Domingo', h: '9:00 – 23:00 · Asado Dominical' }
+      ],
+      footer: { tag: 'Un negocio familiar en la rotonda de La Zenia desde 1999.', nav: 'Explorar', visit: 'Visítanos', follow: 'Síguenos', rights: 'Todos los derechos reservados.' }
+    }
+  };
+
+  toggleLang = () => this.setState(s => ({ lang: s.lang === 'en' ? 'es' : 'en' }));
+  handleSubmit = (e) => { e.preventDefault(); this.setState({ submitted: true }); };
+  fieldHandlerCache = {};
+  makeFieldHandler(key) {
+    if (!this.fieldHandlerCache[key]) this.fieldHandlerCache[key] = (e) => {
+      const val = e && e.target ? e.target.value : e;
+      this.setState(s => ({ fields: { ...s.fields, [key]: val } }));
+    };
+    return this.fieldHandlerCache[key];
+  }
+  renderVals() {
+    const t = this.data[this.state.lang];
+    return {
+      t,
+      otherLang: this.state.lang === 'en' ? 'ES' : 'EN',
+      toggleLang: this.toggleLang,
+      fields: this.state.fields,
+      makeFieldHandler: this.makeFieldHandler.bind(this),
+      handleSubmit: this.handleSubmit,
+      submitted: this.state.submitted,
+      guestOptions: [1, 2, 3, 4, 5, 6, 7, '8+']
+    };
+  }
+}
+
+</script>
+</body>
+</html>

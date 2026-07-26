@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Our Story — Alejandro's Bar &amp; Restaurant Since 1999</title>
+<meta name="description" content="Family-run since 1999 on the La Zenia roundabout — meet the people behind Alejandro's Bar &amp; Restaurant and the story of a Costa Blanca institution." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  body { margin: 0; background: #FBF6EE; -webkit-font-smoothing: antialiased; }
+  a { color: #9F3F22; text-decoration: none; }
+  a:hover { color: #C1502E; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+
+<div style="font-family: 'Manrope', sans-serif; color: #2A211A; background: #FBF6EE; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(251,246,238,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(42,33,26,0.1); padding: clamp(10px,2vw,16px) clamp(16px,4vw,48px); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+    <a href="index.html" style="display: flex; flex-direction: column; line-height: 1; color: #2A211A;">
+      <span style="font-family: 'Piazzolla', serif; font-size: clamp(20px,2.4vw,26px); font-weight: 600; letter-spacing: 0.5px;">Alejandro's</span>
+      <span style="font-size: 10px; letter-spacing: 2.5px; color: #B8923F; margin-top: 2px;">EST. 1999 · LA ZENIA</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: clamp(14px,2vw,28px); flex-wrap: wrap; font-size: 14px; font-weight: 600;">
+      <a href="index.html" style="color: #2A211A;">{{ t.nav.home }}</a>
+      <a href="About.dc.html" style="color: #9F3F22;">{{ t.nav.about }}</a>
+      <a href="Menu.dc.html" style="color: #2A211A;">{{ t.nav.menu }}</a>
+      <a href="Contact.dc.html" style="color: #2A211A;">{{ t.nav.contact }}</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button onClick="{{ toggleLang }}" style="border: 1px solid rgba(42,33,26,0.2); background: transparent; border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #2A211A; cursor: pointer; transition: background 0.2s ease;" style-hover="background: rgba(42,33,26,0.06);">{{ otherLang }}</button>
+      <a href="tel:+34966760623" aria-label="Call Alejandro's" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(42,33,26,0.18); display: flex; align-items: center; justify-content: center; color: #2A211A; transition: transform 0.2s ease;" style-hover="transform: scale(1.08);">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="Contact.dc.html" style="background: #C1502E; color: #FFF8EF; padding: 11px 22px; border-radius: 999px; font-size: 14px; font-weight: 700; white-space: nowrap; transition: transform 0.2s ease, background 0.2s ease;" style-hover="transform: translateY(-2px); background: #9F3F22;">{{ t.nav.reserve }}</a>
+    </div>
+  </header>
+
+  <section style="position: relative; min-height: min(56vh, 520px); display: flex; align-items: flex-end;">
+    <div style="position: absolute; inset: 0; z-index: 0;">
+      <image-slot id="about-hero-bg" shape="rect" placeholder="Drop photo — the family or founding team"></image-slot>
+      <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20,14,10,0.82) 0%, rgba(20,14,10,0.3) 70%); pointer-events: none;"></div>
+    </div>
+    <div style="position: relative; z-index: 1; padding: clamp(32px,6vw,64px) clamp(16px,4vw,48px); max-width: 800px; color: #FBF6EE;">
+      <p style="font-size: 13px; letter-spacing: 3px; font-weight: 700; color: #E3B85F; margin: 0 0 16px; animation: fadeUp 0.6s ease both;">{{ t.heroTag }}</p>
+      <h1 style="font-family: 'Piazzolla', serif; font-size: clamp(32px,6vw,58px); line-height: 1.1; font-weight: 500; margin: 0; animation: fadeUp 0.7s ease 0.1s both;">{{ t.heroTitle }}</h1>
+    </div>
+  </section>
+
+  <section style="padding: clamp(56px,8vw,100px) clamp(16px,4vw,48px); max-width: 900px; margin: 0 auto; text-align: center;">
+    <p style="font-family: 'Piazzolla', serif; font-style: italic; font-size: clamp(20px,2.6vw,28px); line-height: 1.6; color: #2A211A; margin: 0;">{{ t.intro }}</p>
+  </section>
+
+  <section style="padding: 0 clamp(16px,4vw,48px) clamp(56px,8vw,100px); max-width: 1000px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <sc-for list="{{ t.timeline }}" as="row" hint-placeholder-count="4">
+        <div style="display: grid; grid-template-columns: 100px 1fr; gap: 24px; padding: 28px 0; border-top: 1px solid rgba(42,33,26,0.12); transition: padding-left 0.25s ease;" style-hover="padding-left: 8px;">
+          <span style="font-family: 'Piazzolla', serif; font-size: 26px; font-weight: 600; color: #C1502E;">{{ row.year }}</span>
+          <div>
+            <h3 style="font-size: 17px; font-weight: 700; margin: 0 0 8px;">{{ row.title }}</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #6B5D4F; margin: 0;">{{ row.desc }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background: #4B5A3A; padding: clamp(56px,8vw,110px) clamp(16px,4vw,48px); position: relative; overflow: hidden;">
+    <span style="position: absolute; top: -60px; left: clamp(16px,4vw,48px); font-family: 'Piazzolla', serif; font-size: 340px; line-height: 1; color: rgba(251,246,238,0.06); pointer-events: none;">"</span>
+    <div style="max-width: 780px; margin: 0 auto; position: relative; text-align: center;">
+      <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #E3B85F; margin: 0 0 20px;">{{ t.familyTag }}</p>
+      <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(26px,3.4vw,38px); font-weight: 500; margin: 0 0 24px; color: #FBF6EE;">{{ t.familyTitle }}</h2>
+      <p style="color: rgba(251,246,238,0.85); font-size: 17px; line-height: 1.8; margin: 0;">{{ t.familyBody }}</p>
+    </div>
+  </section>
+
+  <section style="padding: clamp(56px,8vw,100px) clamp(16px,4vw,48px); max-width: 1280px; margin: 0 auto;">
+    <div style="text-align: center; max-width: 640px; margin: 0 auto 56px;">
+      <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 12px;">{{ t.valuesTag }}</p>
+      <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(28px,3.6vw,42px); font-weight: 500; margin: 0;">{{ t.valuesHeading }}</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 32px;">
+      <sc-for list="{{ t.values }}" as="v" hint-placeholder-count="3">
+        <div style="background: #FFFFFF; border-radius: 18px; padding: 30px; box-shadow: 0 18px 40px rgba(42,33,26,0.06); transition: transform 0.25s ease, box-shadow 0.25s ease;" style-hover="transform: translateY(-6px); box-shadow: 0 26px 50px rgba(42,33,26,0.12);">
+          <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 12px;">{{ v.title }}</h3>
+          <p style="color: #6B5D4F; font-size: 14.5px; line-height: 1.65; margin: 0;">{{ v.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background: #F3EBDC; padding: clamp(48px,7vw,80px) clamp(16px,4vw,48px);">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 24px; text-align: center;">
+      <sc-for list="{{ t.highlights }}" as="h" hint-placeholder-count="4">
+        <div style="transition: transform 0.25s ease;" style-hover="transform: translateY(-4px);">
+          <div style="font-family: 'Piazzolla', serif; font-size: clamp(28px,3.2vw,36px); font-weight: 600; color: #C1502E; margin-bottom: 8px;">{{ h.num }}</div>
+          <div style="font-size: 13.5px; color: #6B5D4F; letter-spacing: 0.3px;">{{ h.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="position: relative; padding: clamp(64px,9vw,110px) clamp(16px,4vw,48px); text-align: center; overflow: hidden; background: radial-gradient(circle at 70% 30%, #3a2c20 0%, #1E1712 60%);">
+    <div style="position: relative; z-index: 1; max-width: 640px; margin: 0 auto; color: #FBF6EE;">
+      <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(28px,4vw,44px); font-weight: 500; margin: 0 0 18px;">{{ t.ctaHeading }}</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: rgba(251,246,238,0.85); margin: 0 0 32px;">{{ t.ctaSub }}</p>
+      <a href="Contact.dc.html" style="background: #C1502E; color: #FFF8EF; padding: 16px 30px; border-radius: 999px; font-weight: 700; font-size: 15px; transition: transform 0.2s ease;" style-hover="transform: translateY(-3px);">{{ t.ctaBtn }}</a>
+    </div>
+  </section>
+
+  <footer style="background: #1E1712; color: #E9DFC9; padding: clamp(48px,7vw,80px) clamp(16px,4vw,48px) 28px;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(233,223,201,0.14);">
+      <div>
+        <span style="font-family: 'Piazzolla', serif; font-size: 24px; font-weight: 600;">Alejandro's</span>
+        <p style="font-size: 14px; line-height: 1.7; color: rgba(233,223,201,0.65); margin: 14px 0 0; max-width: 260px;">{{ t.footer.tag }}</p>
+        <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <a href="https://facebook.com/alejandros1999" target="_blank" rel="noopener" aria-label="Facebook" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(233,223,201,0.24); display: flex; align-items: center; justify-content: center; color: #E9DFC9; transition: transform 0.2s ease;" style-hover="transform: scale(1.1);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alejandrosrestaurant" target="_blank" rel="noopener" aria-label="Instagram" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(233,223,201,0.24); display: flex; align-items: center; justify-content: center; color: #E9DFC9; transition: transform 0.2s ease;" style-hover="transform: scale(1.1);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.nav }}</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+          <a href="index.html" style="color: #E9DFC9;">{{ t.nav.home }}</a>
+          <a href="About.dc.html" style="color: #E9DFC9;">{{ t.nav.about }}</a>
+          <a href="Menu.dc.html" style="color: #E9DFC9;">{{ t.nav.menu }}</a>
+          <a href="Contact.dc.html" style="color: #E9DFC9;">{{ t.nav.contact }}</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.visit }}</h4>
+        <p style="font-size: 14px; line-height: 1.8; color: rgba(233,223,201,0.75); margin: 0;">Ctra. de Villamartín, 2<br />La Zenia, 03189 Orihuela<br />+34 966 760 623<br />alejandros@gmx.net</p>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.follow }}</h4>
+        <p style="font-size: 14px; color: rgba(233,223,201,0.75); margin: 0;">@alejandrosrestaurant</p>
+      </div>
+    </div>
+    <div style="max-width: 1280px; margin: 0 auto; padding-top: 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: rgba(233,223,201,0.5);">
+      <span>© 2026 Alejandro's Bar &amp; Restaurant. {{ t.footer.rights }}</span>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+
+  data = {
+    en: {
+      nav: { home: 'Home', about: 'Our Story', menu: 'Menu', contact: 'Contact', reserve: 'Reserve' },
+      heroTag: 'OUR STORY', heroTitle: 'Twenty-Five Years on the Roundabout',
+      intro: "A family opened a small bar on the La Zenia roundabout in 1999. A quarter of a century later, it's still family-run — just with a bigger terrace, a longer menu, and a lot more regulars who feel like family too.",
+      timeline: [
+        { year: '1999', title: 'The Doors Open', desc: "Alejandro's begins life as a modest family bar in the heart of La Zenia, built on homemade food and honest prices." },
+        { year: '2000s', title: 'A Menu Without Borders', desc: 'As Costa Blanca filled with neighbours from across Europe, the kitchen grew a menu to match — Mediterranean staples alongside international comfort food.' },
+        { year: '2010s', title: 'The Terrace Becomes the Stage', desc: "Live music nights and a sun-trap terrace turn Alejandro's into the place to be on a Friday night, not just somewhere to eat." },
+        { year: 'Today', title: 'Still Family, Still Here', desc: "Now in its 25th-plus year, Alejandro's remains proudly independent and family-run — the same welcome, generation after generation." }
+      ],
+      familyTag: 'THE PEOPLE', familyTitle: 'A Team That Feels Like Family',
+      familyBody: "Alejandro's has always been more than one family — it's the loyal staff who've stayed for years, the regulars who book the same table every visit, and the new faces who walk in as strangers and leave as friends. That continuity is what guests notice first: familiar faces, consistent food, and a welcome that never feels rehearsed.",
+      valuesTag: 'WHAT WE STAND FOR', valuesHeading: 'The Values Behind Every Table',
+      values: [
+        { title: 'Homemade, Always', desc: 'From sauces to desserts, dishes are made in-house using recipes refined over 25 years — not shortcuts from a supplier catalogue.' },
+        { title: 'A Menu for Everyone', desc: "Vegetarian options in every section and a dedicated children's menu mean no one at the table is an afterthought." },
+        { title: 'Consistency You Can Book On', desc: "Long-serving staff and steady standards mean the Alejandro's you visit today is the one you'll recognise next year." }
+      ],
+      highlights: [
+        { num: '1999', label: 'Year Founded' },
+        { num: '25+', label: 'Years, Family-Run' },
+        { num: '2', label: 'Live Music Nights a Week' },
+        { num: '100%', label: 'Homemade Kitchen' }
+      ],
+      ctaHeading: 'Come Meet the Family', ctaSub: 'The best way to understand 25 years of hospitality is to pull up a chair.',
+      ctaBtn: 'Reserve a Table',
+      footer: { tag: 'Family-run on the La Zenia roundabout since 1999.', nav: 'Explore', visit: 'Visit Us', follow: 'Follow Along', rights: 'All rights reserved.' }
+    },
+    es: {
+      nav: { home: 'Inicio', about: 'Nuestra Historia', menu: 'Carta', contact: 'Contacto', reserve: 'Reservar' },
+      heroTag: 'NUESTRA HISTORIA', heroTitle: 'Veinticinco Años en la Rotonda',
+      intro: 'Una familia abrió un pequeño bar en la rotonda de La Zenia en 1999. Un cuarto de siglo después, sigue siendo familiar — solo que con una terraza más grande, una carta más amplia y muchos más clientes que ya son parte de la familia.',
+      timeline: [
+        { year: '1999', title: 'Se Abren las Puertas', desc: "Alejandro's nace como un modesto bar familiar en el corazón de La Zenia, basado en comida casera y precios honestos." },
+        { year: '2000s', title: 'Una Carta sin Fronteras', desc: 'Con la Costa Blanca llenándose de vecinos de toda Europa, la cocina amplió su carta — clásicos mediterráneos junto a comida internacional reconfortante.' },
+        { year: '2010s', title: 'La Terraza se Convierte en Escenario', desc: "Las noches de música en vivo y una terraza soleada convierten a Alejandro's en el lugar de moda un viernes por la noche, no solo un sitio para comer." },
+        { year: 'Hoy', title: 'Sigue Siendo Familia', desc: "En su año 25 y más, Alejandro's sigue siendo orgullosamente independiente y familiar — la misma bienvenida, generación tras generación." }
+      ],
+      familyTag: 'LAS PERSONAS', familyTitle: 'Un Equipo que se Siente como Familia',
+      familyBody: "Alejandro's siempre ha sido más que una familia — es el personal fiel que lleva años con nosotros, los clientes habituales que reservan la misma mesa cada vez, y las caras nuevas que entran como desconocidos y se van como amigos. Esa continuidad es lo primero que notan los clientes: caras conocidas, comida constante y una bienvenida que nunca se siente ensayada.",
+      valuesTag: 'NUESTROS VALORES', valuesHeading: 'Los Valores Detrás de Cada Mesa',
+      values: [
+        { title: 'Siempre Casero', desc: 'De las salsas a los postres, los platos se elaboran en casa con recetas perfeccionadas durante 25 años — sin atajos de catálogo.' },
+        { title: 'Una Carta para Todos', desc: 'Opciones vegetarianas en cada sección y una carta infantil propia significan que nadie en la mesa queda en un segundo plano.' },
+        { title: 'Constancia en la que Confiar', desc: "Un equipo veterano y estándares estables significan que el Alejandro's que visitas hoy es el mismo que reconocerás el año que viene." }
+      ],
+      highlights: [
+        { num: '1999', label: 'Año de Fundación' },
+        { num: '25+', label: 'Años en Familia' },
+        { num: '2', label: 'Noches de Música en Vivo por Semana' },
+        { num: '100%', label: 'Cocina Casera' }
+      ],
+      ctaHeading: 'Ven a Conocer a la Familia', ctaSub: 'La mejor forma de entender 25 años de hospitalidad es sentarte a la mesa.',
+      ctaBtn: 'Reservar Mesa',
+      footer: { tag: 'Un negocio familiar en la rotonda de La Zenia desde 1999.', nav: 'Explorar', visit: 'Visítanos', follow: 'Síguenos', rights: 'Todos los derechos reservados.' }
+    }
+  };
+
+  toggleLang = () => this.setState(s => ({ lang: s.lang === 'en' ? 'es' : 'en' }));
+
+  renderVals() {
+    const t = this.data[this.state.lang];
+    return {
+      t,
+      otherLang: this.state.lang === 'en' ? 'ES' : 'EN',
+      toggleLang: this.toggleLang
+    };
+  }
+}
+
+</script>
+</body>
+</html>
