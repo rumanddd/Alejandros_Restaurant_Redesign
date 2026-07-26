@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#2A211A">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#2A211A"/>
+    <text x="50" y="46" font-family="serif" font-size="22" fill="#E3B85F" text-anchor="middle">A</text>
+    <text x="50" y="66" font-family="sans-serif" font-size="7" letter-spacing="1" fill="#FBF6EE" text-anchor="middle">MENU</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Menu — Alejandro's Bar &amp; Restaurant, La Zenia</title>
+<meta name="description" content="The full carte at Alejandro's Bar &amp; Restaurant — breakfast, tapas, salads, Mediterranean mains, pasta, pizza, grills, kids menu, desserts and our famous Menu del Dia." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  body { margin: 0; background: #FBF6EE; -webkit-font-smoothing: antialiased; }
+  a { color: #9F3F22; text-decoration: none; }
+  a:hover { color: #C1502E; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+
+<div style="font-family: 'Manrope', sans-serif; color: #2A211A; background: #FBF6EE; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(251,246,238,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(42,33,26,0.1); padding: clamp(10px,2vw,16px) clamp(16px,4vw,48px); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+    <a href="Home.dc.html" style="display: flex; flex-direction: column; line-height: 1; color: #2A211A;">
+      <span style="font-family: 'Piazzolla', serif; font-size: clamp(20px,2.4vw,26px); font-weight: 600; letter-spacing: 0.5px;">Alejandro's</span>
+      <span style="font-size: 10px; letter-spacing: 2.5px; color: #B8923F; margin-top: 2px;">EST. 1999 · LA ZENIA</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: clamp(14px,2vw,28px); flex-wrap: wrap; font-size: 14px; font-weight: 600;">
+      <a href="Home.dc.html" style="color: #2A211A;">{{ t.nav.home }}</a>
+      <a href="About.dc.html" style="color: #2A211A;">{{ t.nav.about }}</a>
+      <a href="Menu.dc.html" style="color: #9F3F22;">{{ t.nav.menu }}</a>
+      <a href="Contact.dc.html" style="color: #2A211A;">{{ t.nav.contact }}</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button onClick="{{ toggleLang }}" style="border: 1px solid rgba(42,33,26,0.2); background: transparent; border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #2A211A; cursor: pointer;">{{ otherLang }}</button>
+      <a href="tel:+34966760623" aria-label="Call Alejandro's" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(42,33,26,0.18); display: flex; align-items: center; justify-content: center; color: #2A211A;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="Contact.dc.html" style="background: #C1502E; color: #FFF8EF; padding: 11px 22px; border-radius: 999px; font-size: 14px; font-weight: 700; white-space: nowrap;">{{ t.nav.reserve }}</a>
+    </div>
+  </header>
+
+  <section style="padding: clamp(48px,7vw,80px) clamp(16px,4vw,48px) clamp(24px,4vw,40px); max-width: 900px; margin: 0 auto; text-align: center;">
+    <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 14px;">{{ t.tag }}</p>
+    <h1 style="font-family: 'Piazzolla', serif; font-size: clamp(32px,5vw,54px); font-weight: 500; margin: 0 0 18px;">{{ t.heading }}</h1>
+    <p style="color: #6B5D4F; font-size: 16px; line-height: 1.7; margin: 0;">{{ t.sub }}</p>
+  </section>
+
+  <section style="padding: 0 clamp(16px,4vw,48px) clamp(56px,8vw,90px); max-width: 1100px; margin: 0 auto;">
+    <div style="background: #2A211A; border-radius: 24px; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));">
+      <div style="padding: clamp(28px,4vw,48px); color: #FBF6EE; display: flex; flex-direction: column; justify-content: center;">
+        <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #E3B85F; margin: 0 0 14px;">{{ t.dotd.tag }}</p>
+        <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(26px,3.2vw,36px); font-weight: 500; margin: 0 0 14px;">{{ t.dotd.heading }}</h2>
+        <p style="color: rgba(251,246,238,0.8); font-size: 15px; line-height: 1.7; margin: 0 0 20px;">{{ t.dotd.body }}</p>
+        <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 22px;">
+          <span style="font-family: 'Piazzolla', serif; font-size: 34px; font-weight: 600; color: #E3B85F;">{{ t.dotd.price }}</span>
+          <span style="font-size: 13px; color: rgba(251,246,238,0.7);">{{ t.dotd.priceNote }}</span>
+        </div>
+        <a href="Contact.dc.html" style="align-self: flex-start; background: #C1502E; color: #FFF8EF; padding: 14px 26px; border-radius: 999px; font-weight: 700; font-size: 14px;">{{ t.dotd.cta }}</a>
+      </div>
+      <div style="max-height: 640px; overflow: auto;">
+        <img src="./assets/menu-del-dia.png" alt="Menu del Dia — daily set menu, served 12:00 to 17:00" style="width: 100%; display: block;" />
+      </div>
+    </div>
+  </section>
+
+  <div style="position: sticky; top: 76px; z-index: 40; background: #FBF6EE; padding: 14px clamp(16px,4vw,48px); border-bottom: 1px solid rgba(42,33,26,0.1);">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+      <sc-for list="{{ t.categories }}" as="cat" hint-placeholder-count="7">
+        <button onClick="{{ makeSelectHandler(cat.id) }}" style="border: 1px solid rgba(42,33,26,0.18); background: {{ cat.active ? '#C1502E' : 'transparent' }}; color: {{ cat.active ? '#FFF8EF' : '#2A211A' }}; padding: 9px 18px; border-radius: 999px; font-size: 13.5px; font-weight: 700; cursor: pointer; white-space: nowrap;">{{ cat.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+
+  <section style="padding: clamp(40px,6vw,64px) clamp(16px,4vw,48px) clamp(64px,8vw,110px); max-width: 900px; margin: 0 auto;">
+    <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(24px,3vw,32px); font-weight: 500; margin: 0 0 8px;">{{ activeCategory.label }}</h2>
+    <p style="color: #6B5D4F; font-size: 14.5px; margin: 0 0 32px;">{{ activeCategory.note }}</p>
+    <sc-for list="{{ activeCategory.groups }}" as="grp" hint-placeholder-count="2">
+      <div style="margin-bottom: 34px;">
+        <sc-if value="{{ grp.title }}">
+          <h3 style="font-size: 12.5px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; font-weight: 700; margin: 0 0 18px;">{{ grp.title }}</h3>
+        </sc-if>
+        <div style="display: flex; flex-direction: column; gap: 26px;">
+          <sc-for list="{{ grp.items }}" as="item" hint-placeholder-count="5">
+            <div style="display: flex; justify-content: space-between; gap: 20px; padding-bottom: 22px; border-bottom: 1px solid rgba(42,33,26,0.1);">
+              <div style="max-width: 560px;">
+                <h3 style="font-size: 17px; font-weight: 700; margin: 0 0 6px;">{{ item.name }}</h3>
+                <p style="font-size: 14.5px; line-height: 1.6; color: #6B5D4F; margin: 0;">{{ item.desc }}</p>
+              </div>
+              <span style="font-family: 'Piazzolla', serif; font-weight: 600; font-size: 16px; color: #C1502E; white-space: nowrap; text-align: right;">{{ item.price }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </section>
+
+  <section style="background: #2A211A; padding: clamp(48px,7vw,80px) clamp(16px,4vw,48px); text-align: center;">
+    <div style="max-width: 600px; margin: 0 auto; color: #FBF6EE;">
+      <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(24px,3.4vw,34px); font-weight: 500; margin: 0 0 16px;">{{ t.ctaHeading }}</h2>
+      <p style="color: rgba(251,246,238,0.78); font-size: 15px; line-height: 1.7; margin: 0 0 28px;">{{ t.ctaSub }}</p>
+      <a href="Contact.dc.html" style="background: #C1502E; color: #FFF8EF; padding: 15px 28px; border-radius: 999px; font-weight: 700; font-size: 14.5px;">{{ t.ctaBtn }}</a>
+    </div>
+  </section>
+
+  <footer style="background: #1E1712; color: #E9DFC9; padding: clamp(48px,7vw,80px) clamp(16px,4vw,48px) 28px;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(233,223,201,0.14);">
+      <div>
+        <span style="font-family: 'Piazzolla', serif; font-size: 24px; font-weight: 600;">Alejandro's</span>
+        <p style="font-size: 14px; line-height: 1.7; color: rgba(233,223,201,0.65); margin: 14px 0 0; max-width: 260px;">{{ t.footer.tag }}</p>
+        <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <a href="https://facebook.com/alejandros1999" target="_blank" rel="noopener" aria-label="Facebook" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(233,223,201,0.24); display: flex; align-items: center; justify-content: center; color: #E9DFC9;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alejandrosrestaurant" target="_blank" rel="noopener" aria-label="Instagram" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(233,223,201,0.24); display: flex; align-items: center; justify-content: center; color: #E9DFC9;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.nav }}</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+          <a href="Home.dc.html" style="color: #E9DFC9;">{{ t.nav.home }}</a>
+          <a href="About.dc.html" style="color: #E9DFC9;">{{ t.nav.about }}</a>
+          <a href="Menu.dc.html" style="color: #E9DFC9;">{{ t.nav.menu }}</a>
+          <a href="Contact.dc.html" style="color: #E9DFC9;">{{ t.nav.contact }}</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.visit }}</h4>
+        <p style="font-size: 14px; line-height: 1.8; color: rgba(233,223,201,0.75); margin: 0;">Ctra. de Villamartín, 2<br />La Zenia, 03189 Orihuela<br />+34 966 760 623<br />alejandros@gmx.net</p>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.follow }}</h4>
+        <p style="font-size: 14px; color: rgba(233,223,201,0.75); margin: 0;">@alejandrosrestaurant</p>
+      </div>
+    </div>
+    <div style="max-width: 1280px; margin: 0 auto; padding-top: 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: rgba(233,223,201,0.5);">
+      <span>© 2026 Alejandro's Bar &amp; Restaurant. {{ t.footer.rights }}</span>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en', activeCat: 'breakfast' };
+
+  data = {
+    en: {
+      nav: { home: 'Home', about: 'Our Story', menu: 'Menu', contact: 'Contact', reserve: 'Reserve' },
+      tag: 'THE FULL CARTE', heading: 'A Menu Built for Every Craving',
+      sub: 'Mediterranean staples, hearty international classics, and a legendary Menu del Dia — with vegetarian options throughout and a menu just for the kids.',
+      dotd: {
+        tag: 'LUNCH, 12:00 – 17:00', heading: 'Menu del Dia',
+        body: "Our famous set lunch: pick one starter and one main course, finished with a dessert and a small drink — all for one simple price. A local favourite, served daily.",
+        price: '€14.90', priceNote: 'per person, one menu per guest',
+        cta: 'Reserve for Lunch'
+      },
+      cats: [
+        { id: 'breakfast', label: 'Breakfast', note: 'Served every day until 2pm.', groups: [ { title: '', items: [
+          { name: 'Toasted Bread with Olive Oil', desc: 'Simple, warm and classic.', price: '€1.90' },
+          { name: 'German Breakfast', desc: 'Ham, cheese and a boiled egg.', price: '€9.40' },
+          { name: 'Croissant with Jam or Honey', desc: 'Fresh-baked and flaky.', price: '€3.50' },
+          { name: 'Sandwich, Your Way', desc: 'Ham, cheese, tuna, chicken or vegetarian.', price: '€3.80' },
+          { name: 'Fried Eggs on Toast', desc: 'Simple and satisfying.', price: '€3.90' },
+          { name: 'Fried Eggs with Ham, Bacon or Sausage & Toast', desc: 'A heartier start to the day.', price: '€5.80' },
+          { name: 'The English Breakfast', desc: 'Eggs, bacon, sausage, beans, mushroom, tomato and toast.', price: '€7.90' },
+          { name: 'Omelette, Your Way', desc: 'Ham, cheese, mushroom or tomato.', price: '€8.50' }
+        ]}]},
+        { id: 'starters', label: 'Starters', note: 'Soups, salads and entradas to begin the meal.', groups: [
+          { title: 'Soups', items: [
+            { name: 'Cream of Tomato Soup with Rice', desc: '', price: '€5.80' },
+            { name: 'Chicken Soup with Vegetables & Rice', desc: '', price: '€5.80' },
+            { name: 'Goulash Soup with Meat', desc: '', price: '€8.50' }
+          ]},
+          { title: 'Salads', items: [
+            { name: 'Mixed Salad', desc: 'Half / Full portion.', price: '€6.50 / €8.50' },
+            { name: 'Salad "Nice" with Tuna & Boiled Egg', desc: 'Half / Full portion.', price: '€9.90 / €12.90' },
+            { name: 'Tomato & Mozzarella with Olive Oil & Basil', desc: 'Half / Full portion.', price: '€9.50 / €12.50' },
+            { name: 'House Salad with Chicken, Bacon & Feta', desc: 'Half / Full portion.', price: '€10.90 / €14.90' },
+            { name: 'Caesar Salad with Chicken, Anchovies & Croutons', desc: 'Half / Full portion.', price: '€10.90 / €14.90' }
+          ]},
+          { title: 'Starters', items: [
+            { name: 'Bruschetta with Tomato, Garlic, Basil & Parmesan', desc: '', price: '€9.90' },
+            { name: 'Prawn Cocktail "Marie Rose"', desc: '', price: '€11.50' },
+            { name: 'Baked Camembert with Cranberries & Side Salad', desc: '', price: '€11.50' },
+            { name: 'Chicken Liver with Onions & Cranberry Sauce', desc: 'Served with side salad.', price: '€12.50' },
+            { name: 'Grilled Prawns with Olive Oil & Garlic', desc: '', price: '€14.90' },
+            { name: 'Pizza Bread', desc: 'Half / Full portion.', price: '€4.50 / €5.50' },
+            { name: 'Garlic Pizza Bread', desc: 'Half / Full portion.', price: '€5.90 / €6.90' },
+            { name: 'Garlic Pizza Bread with Cheese & Hot Peppers', desc: 'Half / Full portion.', price: '€8.50 / €10.50' },
+            { name: 'Bread, Butter & Alioli', desc: 'Per person.', price: '€3.00' }
+          ]}
+        ]},
+        { id: 'mains', label: 'Main Courses', note: 'Grilled, sauced and slow-cooked, served with all the trimmings.', groups: [ { title: '', items: [
+          { name: 'Chicken Breast, Curry Sauce', desc: 'With rice and sautéed vegetables.', price: '€17.90' },
+          { name: 'Chicken Breast, Peppercorn Sauce', desc: 'With fries and sautéed vegetables.', price: '€18.50' },
+          { name: 'Chicken Breast, Mushroom Sauce', desc: 'With roast potatoes and sautéed vegetables.', price: '€18.50' },
+          { name: 'Pork Fillet "Vienna Style"', desc: 'With seasonal salad and fries.', price: '€19.50' },
+          { name: 'Pork Fillet, Mushroom Sauce', desc: 'With roast potatoes and sautéed vegetables.', price: '€20.50' },
+          { name: 'Entrecôte, Mushrooms & Onions', desc: 'With fries and herb butter.', price: '€25.90' },
+          { name: 'Entrecôte, Peppercorn Sauce', desc: 'With fries and sautéed vegetables.', price: '€26.90' },
+          { name: 'Beef Fillet, Onions & Mushrooms', desc: 'With fries and herb butter.', price: '€31.50' },
+          { name: 'Beef Fillet, Hollandaise Sauce', desc: 'With spinach and fries.', price: '€31.50' },
+          { name: 'Beef Fillet, Peppercorn Sauce', desc: 'With vegetables and fries.', price: '€31.50' },
+          { name: 'Roasted Lamb Shanks, Mint Sauce', desc: 'With roast potatoes, bacon and vegetables.', price: '€25.50' },
+          { name: 'Salmon, Hollandaise Sauce', desc: 'With spinach and roast potatoes with bacon.', price: '€27.50' },
+          { name: 'Cod, Mediterranean Style', desc: 'With roast potatoes and bacon.', price: '€26.50' }
+        ]}]},
+        { id: 'pasta', label: 'Pasta Dishes', note: 'Made fresh to order.', groups: [ { title: '', items: [
+          { name: 'Spaghetti "Napoli"', desc: 'Tomato sauce. Half / Full portion.', price: '€8.40 / €9.90' },
+          { name: 'Spaghetti "Bolognese"', desc: 'Half / Full portion.', price: '€10.90 / €12.90' },
+          { name: 'Spaghetti "Carbonara"', desc: 'Half / Full portion.', price: '€10.90 / €12.90' },
+          { name: 'Spaghetti "Al Ollio"', desc: 'With prawns, rocket, tomato and garlic. Half / Full portion.', price: '€14.90 / €16.90' },
+          { name: 'Spaghetti with Salmon', desc: 'Tomato sauce and fresh spinach. Half / Full portion.', price: '€16.90 / €19.90' },
+          { name: 'Macaroni "Bolognese"', desc: 'Half / Full portion.', price: '€10.90 / €12.90' },
+          { name: 'Macaroni with Beef Fillet Strips', desc: 'Olives, capers and tomato sauce. Half / Full portion.', price: '€16.90 / €19.90' },
+          { name: 'Lasagne "Vegetal"', desc: 'Vegetable lasagne. Half / Full portion.', price: '€10.90 / €12.90' },
+          { name: 'Lasagne "Bolognese"', desc: 'Half / Full portion.', price: '€11.90 / €13.90' }
+        ]}]},
+        { id: 'pizza', label: 'Pizza Menu', note: 'Stone-baked, made fresh to order.', groups: [ { title: '', items: [
+          { name: 'Margherita', desc: 'Tomato, cheese, oregano. Half / Full.', price: '€6.90 / €8.90' },
+          { name: 'Hawaii', desc: 'Tomato, cheese, ham, pineapple. Half / Full.', price: '€8.90 / €11.90' },
+          { name: 'Tuna', desc: 'Tomato, cheese, tuna, onion. Half / Full.', price: '€9.50 / €12.50' },
+          { name: 'Salami', desc: 'Tomato, cheese, salami Milano. Half / Full.', price: '€9.50 / €12.50' },
+          { name: 'Barbacoa', desc: 'Minced meat, bacon, fried egg. Half / Full.', price: '€9.90 / €12.90' },
+          { name: 'Serrano', desc: 'Serrano ham, rocket, parmesan. Half / Full.', price: '€9.90 / €12.90' },
+          { name: 'Vegetariana', desc: 'Mediterranean vegetables. Half / Full.', price: '€10.00 / €13.00' },
+          { name: 'Quattro Queso', desc: 'Mozzarella, roquefort, emmental, parmesan. Half / Full.', price: '€8.90 / €11.90' },
+          { name: 'Prosciutto', desc: 'Cheese, mushrooms, artichoke, ham. Half / Full.', price: '€8.90 / €11.90' },
+          { name: '"Cosa Nostra"', desc: 'Beef fillet strips, peppers, onions, herbs. Half / Full.', price: '€16.90 / €19.90' },
+          { name: "Alejandro's", desc: 'Ham, salami, spinach, pepper, artichoke, courgette, aubergine. Half / Full.', price: '€10.50 / €13.50' },
+          { name: 'Curry', desc: 'Curry sauce, chicken, peppers. Half / Full.', price: '€9.50 / €12.50' },
+          { name: 'Mafia', desc: 'Chorizo, chillies, onion, garlic. Half / Full.', price: '€11.00 / €14.50' }
+        ]}]},
+        { id: 'snacks', label: 'Snacks & Kids', note: 'Quick bites, burgers, and a menu built for younger guests.', groups: [
+          { title: 'Snacks', items: [
+            { name: 'Baguette with Ham, Cheese or Tuna', desc: '', price: '€5.90' },
+            { name: 'Baguette with Pork Steak or Bacon', desc: '', price: '€7.40' },
+            { name: 'Burger with Fries & Side Salad', desc: '', price: '€9.90' },
+            { name: 'Chicken Burger with Fries & Side Salad', desc: '', price: '€9.90' },
+            { name: 'Cheeseburger with Fries & Side Salad', desc: '', price: '€10.90' },
+            { name: 'Curry Sausage with Fries & Side Salad', desc: '', price: '€8.90' },
+            { name: 'Chili con Carne with Steamed Rice', desc: '', price: '€12.90' },
+            { name: 'Club Sandwich, Grilled Chicken & Fries', desc: '', price: '€12.90' }
+          ]},
+          { title: "Kids' Menu", items: [
+            { name: 'Spaghetti with Tomato Sauce', desc: '', price: '€7.20' },
+            { name: 'Spaghetti "Bolognese"', desc: '', price: '€8.50' },
+            { name: 'Burger with Fries', desc: '', price: '€8.30' },
+            { name: 'Cheeseburger with Fries', desc: '', price: '€9.30' },
+            { name: 'Wiener Schnitzel with Fries', desc: '', price: '€9.90' },
+            { name: 'Breaded Chicken Breast with Fries', desc: '', price: '€9.90' }
+          ]}
+        ]},
+        { id: 'desserts', label: 'Desserts', note: 'Save room — these are worth it.', groups: [ { title: '', items: [
+          { name: 'Homemade Cheesecake', desc: '', price: '€5.70' },
+          { name: 'Apple Strudel', desc: 'With vanilla ice cream and cream.', price: '€6.20' },
+          { name: 'Small Mixed Ice Cream with Cream', desc: '', price: '€5.90' },
+          { name: 'Large Mixed Ice Cream with Cream', desc: '', price: '€8.20' },
+          { name: 'Chocolate Sundae', desc: 'Vanilla ice cream, chocolate sauce and cream.', price: '€8.90' },
+          { name: 'Strawberry Sundae', desc: 'Vanilla ice cream, strawberry sauce and cream.', price: '€8.90' },
+          { name: 'Vanilla Ice Cream with Hot Fruits', desc: '', price: '€9.50' }
+        ]}]}
+      ],
+      ctaHeading: 'Ready to Taste It Yourself?', ctaSub: 'Reserve your table and let us do the rest.',
+      ctaBtn: 'Reserve a Table',
+      footer: { tag: 'Family-run on the La Zenia roundabout since 1999.', nav: 'Explore', visit: 'Visit Us', follow: 'Follow Along', rights: 'All rights reserved.' }
+    },
+    es: {
+      nav: { home: 'Inicio', about: 'Nuestra Historia', menu: 'Carta', contact: 'Contacto', reserve: 'Reservar' },
+      tag: 'LA CARTA COMPLETA', heading: 'Una Carta para Cada Antojo',
+      sub: 'Clásicos mediterráneos, contundentes platos internacionales, y nuestro legendario Menú del Día — con opciones vegetarianas y una carta infantil propia.',
+      dotd: {
+        tag: 'COMIDAS, 12:00 – 17:00', heading: 'Menú del Día',
+        body: 'Nuestro famoso menú del mediodía: elige un entrante y un plato principal, y termina con postre y una bebida pequeña — todo por un precio sencillo. Un favorito local, cada día.',
+        price: '14,90€', priceNote: 'por persona, un menú por comensal',
+        cta: 'Reservar para Comer'
+      },
+      cats: [
+        { id: 'breakfast', label: 'Desayunos', note: 'Servido todos los días hasta las 14:00.', groups: [ { title: '', items: [
+          { name: 'Tostada con Aceite de Oliva', desc: 'Sencillo, cálido y clásico.', price: '1,90€' },
+          { name: 'Desayuno Alemán', desc: 'Embutidos, queso y huevo cocido.', price: '9,40€' },
+          { name: 'Croissant con Mermelada o Miel', desc: 'Recién horneado y hojaldrado.', price: '3,50€' },
+          { name: 'Sandwich a tu Gusto', desc: 'Jamón, queso, atún, pollo o vegetariano.', price: '3,80€' },
+          { name: 'Huevos Fritos con Pan de Molde', desc: 'Sencillo y saciante.', price: '3,90€' },
+          { name: 'Huevos Fritos con Beicon, Jamón o Salchichas y Tostada', desc: 'Un comienzo más contundente.', price: '5,80€' },
+          { name: 'Desayuno Inglés', desc: 'Huevo, beicon, salchicha, alubias, champiñón, tomate y tostada.', price: '7,90€' },
+          { name: 'Tortilla a tu Gusto', desc: 'Jamón, queso, champiñón o tomate.', price: '8,50€' }
+        ]}]},
+        { id: 'starters', label: 'Entrantes', note: 'Sopas, ensaladas y entradas para empezar.', groups: [
+          { title: 'Sopas', items: [
+            { name: 'Crema de Tomate con Arroz', desc: '', price: '5,80€' },
+            { name: 'Sopa de Pollo con Verduras y Arroz', desc: '', price: '5,80€' },
+            { name: 'Sopa de Goulash con Carne', desc: '', price: '8,50€' }
+          ]},
+          { title: 'Ensaladas', items: [
+            { name: 'Ensalada Mixta', desc: 'Media / Ración completa.', price: '6,50€ / 8,50€' },
+            { name: 'Ensalada "Nizza" con Atún y Huevo', desc: 'Media / Ración completa.', price: '9,90€ / 12,90€' },
+            { name: 'Tomate y Mozzarella con Aceite y Albahaca', desc: 'Media / Ración completa.', price: '9,50€ / 12,50€' },
+            { name: 'Ensalada de la Casa con Pollo, Beicon y Feta', desc: 'Media / Ración completa.', price: '10,90€ / 14,90€' },
+            { name: 'Ensalada Caesar con Pollo, Anchoas y Picatostes', desc: 'Media / Ración completa.', price: '10,90€ / 14,90€' }
+          ]},
+          { title: 'Entradas', items: [
+            { name: 'Bruschetta con Tomate, Ajo, Albahaca y Parmesano', desc: '', price: '9,90€' },
+            { name: 'Cóctel de Gambas en Salsa "Marie Rose"', desc: '', price: '11,50€' },
+            { name: 'Queso Camembert Gratinado con Arándanos', desc: 'Con ensalada.', price: '11,50€' },
+            { name: 'Hígado de Pollo con Cebollas y Salsa de Arándanos', desc: 'Con ensalada.', price: '12,50€' },
+            { name: 'Gambas Peladas con Aceite de Oliva y Ajo', desc: '', price: '14,90€' },
+            { name: 'Pan de Pizza', desc: 'Media / Ración completa.', price: '4,50€ / 5,50€' },
+            { name: 'Pan de Pizza con Ajo', desc: 'Media / Ración completa.', price: '5,90€ / 6,90€' },
+            { name: 'Pan de Pizza con Ajo, Queso y Guindillas', desc: 'Media / Ración completa.', price: '8,50€ / 10,50€' },
+            { name: 'Pan, Mantequilla y Alioli', desc: 'Por persona.', price: '3,00€' }
+          ]}
+        ]},
+        { id: 'mains', label: 'Platos Principales', note: 'A la parrilla, con salsa o cocinados a fuego lento, con todas las guarniciones.', groups: [ { title: '', items: [
+          { name: 'Pechuga de Pollo, Salsa de Curry', desc: 'Con arroz y verduras salteadas.', price: '17,90€' },
+          { name: 'Pechuga de Pollo, Salsa de Pimienta', desc: 'Con patatas fritas y verduras salteadas.', price: '18,50€' },
+          { name: 'Pechuga de Pollo, Salsa de Champiñones', desc: 'Con patatas asadas y verduras salteadas.', price: '18,50€' },
+          { name: 'Solomillo de Cerdo "Vienesa"', desc: 'Con ensalada de temporada y patatas fritas.', price: '19,50€' },
+          { name: 'Solomillo de Cerdo, Salsa de Champiñones', desc: 'Con patatas asadas y verduras salteadas.', price: '20,50€' },
+          { name: 'Entrecôte, Champiñones y Cebollas', desc: 'Con patatas fritas y mantequilla de hierbas.', price: '25,90€' },
+          { name: 'Entrecôte, Salsa de Pimienta', desc: 'Con patatas fritas y verduras salteadas.', price: '26,90€' },
+          { name: 'Solomillo de Ternera, Cebollas y Champiñones', desc: 'Con patatas fritas y mantequilla de hierbas.', price: '31,50€' },
+          { name: 'Solomillo de Ternera, Salsa Hollandaise', desc: 'Con espinacas y patatas fritas.', price: '31,50€' },
+          { name: 'Solomillo de Ternera, Salsa de Pimienta', desc: 'Con verduras y patatas fritas.', price: '31,50€' },
+          { name: 'Muslos de Cordero, Salsa de Menta', desc: 'Con patatas asadas, beicon y verduras.', price: '25,50€' },
+          { name: 'Salmón, Salsa Hollandaise', desc: 'Con espinacas y patatas asadas con beicon.', price: '27,50€' },
+          { name: 'Bacalao Mediterránea', desc: 'Con patatas asadas y beicon.', price: '26,50€' }
+        ]}]},
+        { id: 'pasta', label: 'Pastas', note: 'Preparadas al momento.', groups: [ { title: '', items: [
+          { name: 'Espagueti "Napoli"', desc: 'Salsa de tomate. Media / Ración completa.', price: '8,40€ / 9,90€' },
+          { name: 'Espagueti "Bolognese"', desc: 'Media / Ración completa.', price: '10,90€ / 12,90€' },
+          { name: 'Espagueti "Carbonara"', desc: 'Media / Ración completa.', price: '10,90€ / 12,90€' },
+          { name: 'Espagueti "Al Ollio"', desc: 'Con gambas, ruccola, tomate y ajo. Media / Ración completa.', price: '14,90€ / 16,90€' },
+          { name: 'Espagueti con Salmón', desc: 'Salsa de tomate y espinacas frescas. Media / Ración completa.', price: '16,90€ / 19,90€' },
+          { name: 'Maccaroni "Bolognese"', desc: 'Media / Ración completa.', price: '10,90€ / 12,90€' },
+          { name: 'Maccaroni con Tiras de Ternera', desc: 'Aceitunas, alcaparras y salsa de tomate. Media / Ración completa.', price: '16,90€ / 19,90€' },
+          { name: 'Lasagne "Vegetal"', desc: 'Media / Ración completa.', price: '10,90€ / 12,90€' },
+          { name: 'Lasagne "Bolognese"', desc: 'Media / Ración completa.', price: '11,90€ / 13,90€' }
+        ]}]},
+        { id: 'pizza', label: 'Pizzas', note: 'Horneadas en piedra, al momento.', groups: [ { title: '', items: [
+          { name: 'Margerita', desc: 'Tomate, queso, orégano. Media / Completa.', price: '6,90€ / 8,90€' },
+          { name: 'Hawaii', desc: 'Tomate, queso, jamón, piña. Media / Completa.', price: '8,90€ / 11,90€' },
+          { name: 'Tuna', desc: 'Tomate, queso, atún, cebolla. Media / Completa.', price: '9,50€ / 12,50€' },
+          { name: 'Salami', desc: 'Tomate, queso, salami Milano. Media / Completa.', price: '9,50€ / 12,50€' },
+          { name: 'Barbacoa', desc: 'Carne picada, beicon, huevo frito. Media / Completa.', price: '9,90€ / 12,90€' },
+          { name: 'Serrano', desc: 'Jamón serrano, ruccola, parmesano. Media / Completa.', price: '9,90€ / 12,90€' },
+          { name: 'Vegetariana', desc: 'Verduras mediterráneas. Media / Completa.', price: '10,00€ / 13,00€' },
+          { name: 'Quattro Queso', desc: 'Mozzarella, roquefort, emmental, parmesano. Media / Completa.', price: '8,90€ / 11,90€' },
+          { name: 'Prosciutto', desc: 'Queso, champiñones, alcachofa, jamón. Media / Completa.', price: '8,90€ / 11,90€' },
+          { name: '"Cosa Nostra"', desc: 'Tiras de solomillo, pimientos, cebollas, hierbas. Media / Completa.', price: '16,90€ / 19,90€' },
+          { name: "Alejandro's", desc: 'Jamón, salami, espinacas, pimiento, alcachofa, calabacín, berenjena. Media / Completa.', price: '10,50€ / 13,50€' },
+          { name: 'Curry', desc: 'Salsa curry, pollo, pimienta. Media / Completa.', price: '9,50€ / 12,50€' },
+          { name: 'Mafia', desc: 'Chorizo, guindillas, cebolla, ajo. Media / Completa.', price: '11,00€ / 14,50€' }
+        ]}]},
+        { id: 'snacks', label: 'Snacks e Infantil', note: 'Bocados rápidos, hamburguesas, y una carta para los más pequeños.', groups: [
+          { title: 'Snacks', items: [
+            { name: 'Bocadillo Variado con Jamón, Queso o Atún', desc: '', price: '5,90€' },
+            { name: 'Bocadillo Variado con Lomo o Beicon', desc: '', price: '7,40€' },
+            { name: 'Hamburguesa con Patatas y Guarnición', desc: '', price: '9,90€' },
+            { name: 'Hamburguesa de Pollo con Patatas y Guarnición', desc: '', price: '9,90€' },
+            { name: 'Hamburguesa de Queso con Patatas y Guarnición', desc: '', price: '10,90€' },
+            { name: 'Salchicha de Curry con Patatas y Guarnición', desc: '', price: '8,90€' },
+            { name: 'Chili con Carne con Arroz Blanco', desc: '', price: '12,90€' },
+            { name: 'Club Sandwich con Pollo a la Plancha y Patatas', desc: '', price: '12,90€' }
+          ]},
+          { title: 'Carta Infantil', items: [
+            { name: 'Espaguetis con Salsa de Tomate', desc: '', price: '7,20€' },
+            { name: 'Espaguetis "Bolognese"', desc: '', price: '8,50€' },
+            { name: 'Hamburguesa con Patatas Fritas', desc: '', price: '8,30€' },
+            { name: 'Hamburguesa con Queso y Patatas Fritas', desc: '', price: '9,30€' },
+            { name: 'Escalopa a la Vienesa con Patatas Fritas', desc: '', price: '9,90€' },
+            { name: 'Pechuga de Pollo Empanada con Patatas Fritas', desc: '', price: '9,90€' }
+          ]}
+        ]},
+        { id: 'desserts', label: 'Postres', note: 'Deja hueco — merecen la pena.', groups: [ { title: '', items: [
+          { name: 'Tarta de Queso Casera', desc: '', price: '5,70€' },
+          { name: 'Tarta de Manzana', desc: 'Con helado de vainilla y nata.', price: '6,20€' },
+          { name: 'Helado Mixto Pequeño con Nata', desc: '', price: '5,90€' },
+          { name: 'Helado Mixto Grande con Nata', desc: '', price: '8,20€' },
+          { name: 'Helado de Vainilla con Salsa de Chocolate y Nata', desc: '', price: '8,90€' },
+          { name: 'Helado de Vainilla con Salsa de Fresa y Nata', desc: '', price: '8,90€' },
+          { name: 'Helado de Vainilla con Fruta Caliente', desc: '', price: '9,50€' }
+        ]}]}
+      ],
+      ctaHeading: '¿Listo para Probarlo?', ctaSub: 'Reserva tu mesa y nosotros nos encargamos del resto.',
+      ctaBtn: 'Reservar Mesa',
+      footer: { tag: 'Un negocio familiar en la rotonda de La Zenia desde 1999.', nav: 'Explorar', visit: 'Visítanos', follow: 'Síguenos', rights: 'Todos los derechos reservados.' }
+    }
+  };
+
+  toggleLang = () => this.setState(s => ({ lang: s.lang === 'en' ? 'es' : 'en' }));
+  selectCat = (id) => this.setState({ activeCat: id });
+  handlerCache = {};
+  makeSelectHandler(id) {
+    if (!this.handlerCache[id]) this.handlerCache[id] = () => this.selectCat(id);
+    return this.handlerCache[id];
+  }
+
+  renderVals() {
+    const t = this.data[this.state.lang];
+    const categories = t.cats.map(c => ({ ...c, active: c.id === this.state.activeCat }));
+    const activeCategory = categories.find(c => c.id === this.state.activeCat) || categories[0];
+    return {
+      t: { ...t, categories },
+      otherLang: this.state.lang === 'en' ? 'ES' : 'EN',
+      toggleLang: this.toggleLang,
+      makeSelectHandler: this.makeSelectHandler.bind(this),
+      activeCategory
+    };
+  }
+}
+
+</script>
+</body>
+</html>

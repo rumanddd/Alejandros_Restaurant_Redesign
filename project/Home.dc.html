@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Alejandro's Bar &amp; Restaurant — Mediterranean Dining in La Zenia Since 1999</title>
+<meta name="description" content="Family-run since 1999 on the La Zenia roundabout. Mediterranean &amp; international dishes, cocktails on the terrace and live music every weekend. Reserve your table today." />
+<meta property="og:title" content="Alejandro's Bar &amp; Restaurant" />
+<meta property="og:description" content="Family-run Mediterranean dining in La Zenia, Costa Blanca since 1999. Live music, cocktails, and a warm welcome." />
+<meta property="og:type" content="restaurant.restaurant" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Alejandro's Bar & Restaurant","image":"","servesCuisine":["Mediterranean","International","Spanish"],"priceRange":"€€","telephone":"+34966760623","email":"alejandros@gmx.net","address":{"@type":"PostalAddress","streetAddress":"Ctra. de Villamartín, 2","addressLocality":"La Zenia, Orihuela","postalCode":"03189","addressRegion":"Alicante","addressCountry":"ES"},"geo":{"@type":"GeoCoordinates","latitude":37.925824,"longitude":-0.729859},"foundingDate":"1999","sameAs":["https://facebook.com/alejandros1999","https://www.instagram.com/alejandrosrestaurant"]}
+</script>
+<style>
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  body { margin: 0; background: #FBF6EE; -webkit-font-smoothing: antialiased; }
+  a { color: #9F3F22; text-decoration: none; }
+  a:hover { color: #C1502E; }
+  * { box-sizing: border-box; }
+</style>
+</helmet>
+
+<div style="font-family: 'Manrope', sans-serif; color: #2A211A; background: #FBF6EE; overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(251,246,238,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(42,33,26,0.1); padding: clamp(10px,2vw,16px) clamp(16px,4vw,48px); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+    <a href="Home.dc.html" style="display: flex; flex-direction: column; line-height: 1; color: #2A211A;">
+      <span style="font-family: 'Piazzolla', serif; font-size: clamp(20px,2.4vw,26px); font-weight: 600; letter-spacing: 0.5px;">Alejandro's</span>
+      <span style="font-size: 10px; letter-spacing: 2.5px; color: #B8923F; margin-top: 2px;">EST. 1999 · LA ZENIA</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: clamp(14px,2vw,28px); flex-wrap: wrap; font-size: 14px; font-weight: 600;">
+      <a href="Home.dc.html" style="color: #9F3F22;">{{ t.nav.home }}</a>
+      <a href="About.dc.html" style="color: #2A211A;">{{ t.nav.about }}</a>
+      <a href="Menu.dc.html" style="color: #2A211A;">{{ t.nav.menu }}</a>
+      <a href="Contact.dc.html" style="color: #2A211A;">{{ t.nav.contact }}</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <button onClick="{{ toggleLang }}" style="border: 1px solid rgba(42,33,26,0.2); background: transparent; border-radius: 999px; padding: 8px 14px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #2A211A; cursor: pointer; transition: background 0.2s ease;" style-hover="background: rgba(42,33,26,0.06);">{{ otherLang }}</button>
+      <a href="tel:+34966760623" aria-label="Call Alejandro's" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(42,33,26,0.18); display: flex; align-items: center; justify-content: center; color: #2A211A; transition: transform 0.2s ease;" style-hover="transform: scale(1.08);">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="Contact.dc.html" style="background: #C1502E; color: #FFF8EF; padding: 11px 22px; border-radius: 999px; font-size: 14px; font-weight: 700; white-space: nowrap; transition: transform 0.2s ease, background 0.2s ease;" style-hover="transform: translateY(-2px); background: #9F3F22;">{{ t.nav.reserve }}</a>
+    </div>
+  </header>
+
+  <section style="position: relative; min-height: min(88vh, 820px); display: flex; align-items: flex-end;">
+    <div style="position: absolute; inset: 0; z-index: 0;">
+      <image-slot id="hero-bg" shape="rect" placeholder="Drop hero photo — sunlit terrace, full tables, warm evening light"></image-slot>
+      <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20,14,10,0.82) 0%, rgba(20,14,10,0.45) 55%, rgba(20,14,10,0.15) 100%); pointer-events: none;"></div>
+    </div>
+    <div style="position: relative; z-index: 1; padding: clamp(32px,6vw,80px) clamp(16px,4vw,48px); max-width: 900px; color: #FBF6EE;">
+      <p style="font-size: 13px; letter-spacing: 3px; font-weight: 700; color: #E3B85F; margin: 0 0 18px; animation: fadeUp 0.7s ease both;">{{ t.hero.overline }}</p>
+      <h1 style="font-family: 'Piazzolla', serif; font-size: clamp(36px,7vw,72px); line-height: 1.05; font-weight: 500; margin: 0 0 22px; animation: fadeUp 0.8s ease 0.1s both;">{{ t.hero.title }}</h1>
+      <p style="font-size: clamp(16px,1.7vw,19px); line-height: 1.6; max-width: 560px; color: rgba(251,246,238,0.88); margin: 0 0 34px; animation: fadeUp 0.8s ease 0.2s both;">{{ t.hero.subhead }}</p>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.3s both;">
+        <a href="Contact.dc.html" style="background: #C1502E; color: #FFF8EF; padding: 16px 30px; border-radius: 999px; font-weight: 700; font-size: 15px; transition: transform 0.2s ease;" style-hover="transform: translateY(-3px);">{{ t.hero.cta1 }}</a>
+        <a href="Menu.dc.html" style="background: rgba(251,246,238,0.12); border: 1px solid rgba(251,246,238,0.5); color: #FBF6EE; padding: 16px 30px; border-radius: 999px; font-weight: 700; font-size: 15px; transition: transform 0.2s ease;" style-hover="transform: translateY(-3px);">{{ t.hero.cta2 }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #2A211A; padding: 20px 0; overflow: hidden;">
+    <div style="display: flex; width: max-content; animation: marquee 26s linear infinite; gap: 48px;">
+      <sc-for list="{{ marqueeItems }}" as="item" hint-placeholder-count="8">
+        <span style="color: #E9DFC9; font-size: 13px; font-weight: 700; letter-spacing: 1px; white-space: nowrap; display: flex; align-items: center; gap: 10px;">{{ item }} <span style="color: #B8923F;">✦</span></span>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding: clamp(56px,8vw,110px) clamp(16px,4vw,48px); max-width: 1280px; margin: 0 auto;">
+    <div style="text-align: center; max-width: 620px; margin: 0 auto 56px;">
+      <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 12px;">{{ t.dishesTag }}</p>
+      <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(30px,4vw,46px); font-weight: 500; margin: 0 0 16px;">{{ t.dishesHeading }}</h2>
+      <p style="color: #6B5D4F; font-size: 16px; line-height: 1.6;">{{ t.dishesSub }}</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 28px;">
+      <sc-for list="{{ t.dishes }}" as="dish" hint-placeholder-count="4">
+        <div style="background: #FFFFFF; border-radius: 18px; overflow: hidden; box-shadow: 0 18px 40px rgba(42,33,26,0.08); padding: 30px 24px; transition: transform 0.25s ease, box-shadow 0.25s ease;" style-hover="transform: translateY(-6px); box-shadow: 0 26px 50px rgba(42,33,26,0.14);">
+            <span style="font-family: 'Piazzolla', serif; font-style: italic; font-size: 34px; color: #E9DFC9; -webkit-text-stroke: 1px #C1502E; color: transparent; display: block; margin-bottom: 6px;">{{ dish.num }}</span>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 8px;">
+              <h3 style="font-family: 'Piazzolla', serif; font-size: 19px; font-weight: 600; margin: 0;">{{ dish.name }}</h3>
+              <span style="color: #C1502E; font-weight: 700; font-size: 15px; white-space: nowrap;">{{ dish.price }}</span>
+            </div>
+            <p style="color: #6B5D4F; font-size: 14px; line-height: 1.55; margin: 0;">{{ dish.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background: #F3EBDC; padding: clamp(56px,8vw,110px) clamp(16px,4vw,48px);">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 620px; margin: 0 auto 56px;">
+        <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 12px;">{{ t.whyTag }}</p>
+        <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(30px,4vw,46px); font-weight: 500; margin: 0;">{{ t.whyHeading }}</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 36px;">
+        <sc-for list="{{ t.why }}" as="item" hint-placeholder-count="4">
+          <div style="transition: transform 0.25s ease;" style-hover="transform: translateY(-4px);">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: #C1502E; color: #FBF6EE; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; font-family: 'Piazzolla', serif; font-size: 20px;">{{ item.mark }}</div>
+            <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 10px;">{{ item.title }}</h3>
+            <p style="color: #6B5D4F; font-size: 14.5px; line-height: 1.6; margin: 0;">{{ item.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: clamp(56px,8vw,110px) clamp(16px,4vw,48px); max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: clamp(32px,5vw,64px); align-items: center;">
+    <div style="background: #2A211A; border-radius: 22px; aspect-ratio: 4/5; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; color: #FBF6EE;">
+      <span style="font-family: 'Piazzolla', serif; font-size: clamp(70px,9vw,110px); font-weight: 600; color: #E3B85F; line-height: 1;">25+</span>
+      <span style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(251,246,238,0.7); margin-top: 10px;">{{ t.yearsLabel }}</span>
+      <div style="width: 40px; height: 1px; background: rgba(251,246,238,0.3); margin: 26px 0;"></div>
+      <span style="font-family: 'Piazzolla', serif; font-size: 22px; font-style: italic; color: #FBF6EE;">"1999"</span>
+      <span style="font-size: 13px; color: rgba(251,246,238,0.6); margin-top: 6px;">{{ t.foundedLabel }}</span>
+    </div>
+    <div>
+      <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 12px;">{{ t.aboutTag }}</p>
+      <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(28px,3.6vw,42px); font-weight: 500; margin: 0 0 20px;">{{ t.aboutTitle }}</h2>
+      <p style="color: #6B5D4F; font-size: 16px; line-height: 1.7; margin: 0 0 26px;">{{ t.aboutBody }}</p>
+      <a href="About.dc.html" style="font-weight: 700; font-size: 15px; color: #C1502E; border-bottom: 2px solid #C1502E; padding-bottom: 3px;">{{ t.aboutCta }} →</a>
+    </div>
+  </section>
+
+  <section style="background: #2A211A; padding: clamp(56px,8vw,110px) clamp(16px,4vw,48px); color: #FBF6EE;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 32px;">
+      <div style="background: rgba(251,246,238,0.06); border: 1px solid rgba(251,246,238,0.14); border-radius: 20px; padding: clamp(28px,4vw,44px); transition: border-color 0.25s ease;" style-hover="border-color: rgba(227,184,95,0.5);">
+        <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #E3B85F; margin: 0 0 14px;">{{ t.specialsTag }}</p>
+        <h3 style="font-family: 'Piazzolla', serif; font-size: clamp(24px,2.8vw,32px); font-weight: 500; margin: 0 0 16px;">{{ t.specialsTitle }}</h3>
+        <p style="color: rgba(251,246,238,0.78); font-size: 15px; line-height: 1.7; margin: 0 0 24px;">{{ t.specialsBody }}</p>
+        <a href="Menu.dc.html" style="font-weight: 700; font-size: 14px; color: #E3B85F; border-bottom: 2px solid #E3B85F; padding-bottom: 3px;">{{ t.specialsCta }} →</a>
+      </div>
+      <div style="background: rgba(251,246,238,0.06); border: 1px solid rgba(251,246,238,0.14); border-radius: 20px; padding: clamp(28px,4vw,44px); transition: border-color 0.25s ease;" style-hover="border-color: rgba(227,184,95,0.5);">
+        <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #E3B85F; margin: 0 0 14px;">{{ t.musicTag }}</p>
+        <h3 style="font-family: 'Piazzolla', serif; font-size: clamp(24px,2.8vw,32px); font-weight: 500; margin: 0 0 16px;">{{ t.musicTitle }}</h3>
+        <p style="color: rgba(251,246,238,0.78); font-size: 15px; line-height: 1.7; margin: 0 0 24px;">{{ t.musicBody }}</p>
+        <a href="Contact.dc.html" style="font-weight: 700; font-size: 14px; color: #E3B85F; border-bottom: 2px solid #E3B85F; padding-bottom: 3px;">{{ t.musicCta }} →</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: clamp(56px,8vw,110px) clamp(16px,4vw,48px); max-width: 1280px; margin: 0 auto;">
+    <div style="text-align: center; max-width: 620px; margin: 0 auto 56px;">
+      <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 12px;">{{ t.reviewsTag }}</p>
+      <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(30px,4vw,46px); font-weight: 500; margin: 0;">{{ t.reviewsHeading }}</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 26px;">
+      <sc-for list="{{ t.reviews }}" as="rev" hint-placeholder-count="3">
+        <div style="background: #FFFFFF; border-radius: 18px; padding: 30px; box-shadow: 0 18px 40px rgba(42,33,26,0.08); transition: transform 0.25s ease;" style-hover="transform: translateY(-6px);">
+          <div style="color: #B8923F; font-size: 15px; letter-spacing: 2px; margin-bottom: 14px;">★★★★★</div>
+          <p style="font-size: 15px; line-height: 1.7; color: #2A211A; margin: 0 0 18px; font-style: italic;">"{{ rev.quote }}"</p>
+          <p style="font-size: 13px; font-weight: 700; color: #6B5D4F; margin: 0;">{{ rev.name }} · {{ rev.source }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background: #F3EBDC; padding: clamp(56px,8vw,100px) clamp(16px,4vw,48px);">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; text-align: center;">
+      <div>
+        <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 10px;">{{ t.instaTag }}</p>
+        <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(24px,3vw,34px); font-weight: 500; margin: 0 0 10px;">{{ t.instaHeading }}</h2>
+        <p style="color: #6B5D4F; font-size: 15px; margin: 0 0 20px;">{{ t.instaSub }}</p>
+        <a href="https://www.instagram.com/alejandrosrestaurant" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; background: #2A211A; color: #FBF6EE; padding: 13px 24px; border-radius: 999px; font-weight: 700; font-size: 14px; transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            {{ t.instaCta }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #FFFFFF; padding: clamp(56px,8vw,100px) clamp(16px,4vw,48px);">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap: clamp(32px,5vw,64px);">
+      <div>
+        <p style="font-size: 12px; letter-spacing: 3px; font-weight: 700; color: #B8923F; margin: 0 0 12px;">{{ t.locationTag }}</p>
+        <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(28px,3.6vw,40px); font-weight: 500; margin: 0 0 24px;">{{ t.locationHeading }}</h2>
+        <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; border: 1px solid rgba(42,33,26,0.1);">
+          <iframe title="Map to Alejandro's Bar &amp; Restaurant" src="https://maps-api-ssl.google.com/maps?hl=en-US&amp;ll=37.925771,-0.729696&amp;output=embed&amp;q=37.925824,-0.729859&amp;z=17" style="width: 100%; height: 100%; border: 0;" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <div>
+          <h3 style="font-size: 16px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #B8923F; margin: 0 0 12px;">{{ t.addressTitle }}</h3>
+          <p style="font-size: 17px; line-height: 1.6; margin: 0 0 6px;">Ctra. de Villamartín, 2</p>
+          <p style="font-size: 17px; line-height: 1.6; margin: 0; color: #6B5D4F;">La Zenia, 03189 Orihuela, Alicante</p>
+        </div>
+        <div>
+          <h3 style="font-size: 16px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #B8923F; margin: 0 0 12px;">{{ t.hoursTitle }}</h3>
+          <sc-for list="{{ t.hours }}" as="row" hint-placeholder-count="3">
+            <div style="display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-bottom: 1px solid rgba(42,33,26,0.08); font-size: 15px;">
+              <span style="font-weight: 600;">{{ row.d }}</span>
+              <span style="color: #6B5D4F; text-align: right;">{{ row.h }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="tel:+34966760623" style="display: flex; align-items: center; gap: 8px; background: #2A211A; color: #FBF6EE; padding: 13px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">{{ t.callBtn }}</a>
+          <a href="https://wa.me/34966760623" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 8px; background: #4B5A3A; color: #FBF6EE; padding: 13px 20px; border-radius: 999px; font-weight: 700; font-size: 14px; transition: transform 0.2s ease;" style-hover="transform: translateY(-2px);">{{ t.whatsappBtn }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="position: relative; padding: clamp(64px,9vw,120px) clamp(16px,4vw,48px); text-align: center; overflow: hidden; background: radial-gradient(circle at 30% 20%, #3a2c20 0%, #1E1712 60%);">
+    <div style="position: relative; z-index: 1; max-width: 640px; margin: 0 auto; color: #FBF6EE;">
+      <h2 style="font-family: 'Piazzolla', serif; font-size: clamp(30px,4.4vw,50px); font-weight: 500; margin: 0 0 18px;">{{ t.ctaHeading }}</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: rgba(251,246,238,0.85); margin: 0 0 34px;">{{ t.ctaSub }}</p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="Contact.dc.html" style="background: #C1502E; color: #FFF8EF; padding: 16px 30px; border-radius: 999px; font-weight: 700; font-size: 15px; transition: transform 0.2s ease;" style-hover="transform: translateY(-3px);">{{ t.ctaBtn1 }}</a>
+        <a href="tel:+34966760623" style="background: rgba(251,246,238,0.1); border: 1px solid rgba(251,246,238,0.5); color: #FBF6EE; padding: 16px 30px; border-radius: 999px; font-weight: 700; font-size: 15px; transition: transform 0.2s ease;" style-hover="transform: translateY(-3px);">{{ t.ctaBtn2 }}</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #1E1712; color: #E9DFC9; padding: clamp(48px,7vw,80px) clamp(16px,4vw,48px) 28px;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(233,223,201,0.14);">
+      <div>
+        <span style="font-family: 'Piazzolla', serif; font-size: 24px; font-weight: 600;">Alejandro's</span>
+        <p style="font-size: 14px; line-height: 1.7; color: rgba(233,223,201,0.65); margin: 14px 0 0; max-width: 260px;">{{ t.footer.tag }}</p>
+        <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <a href="https://facebook.com/alejandros1999" target="_blank" rel="noopener" aria-label="Facebook" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(233,223,201,0.24); display: flex; align-items: center; justify-content: center; color: #E9DFC9; transition: transform 0.2s ease;" style-hover="transform: scale(1.1);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/alejandrosrestaurant" target="_blank" rel="noopener" aria-label="Instagram" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(233,223,201,0.24); display: flex; align-items: center; justify-content: center; color: #E9DFC9; transition: transform 0.2s ease;" style-hover="transform: scale(1.1);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.nav }}</h4>
+        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+          <a href="Home.dc.html" style="color: #E9DFC9;">{{ t.nav.home }}</a>
+          <a href="About.dc.html" style="color: #E9DFC9;">{{ t.nav.about }}</a>
+          <a href="Menu.dc.html" style="color: #E9DFC9;">{{ t.nav.menu }}</a>
+          <a href="Contact.dc.html" style="color: #E9DFC9;">{{ t.nav.contact }}</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.visit }}</h4>
+        <p style="font-size: 14px; line-height: 1.8; color: rgba(233,223,201,0.75); margin: 0;">Ctra. de Villamartín, 2<br />La Zenia, 03189 Orihuela<br />+34 966 760 623<br />alejandros@gmx.net</p>
+      </div>
+      <div>
+        <h4 style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #B8923F; margin: 0 0 18px;">{{ t.footer.follow }}</h4>
+        <p style="font-size: 14px; color: rgba(233,223,201,0.75); margin: 0;">@alejandrosrestaurant</p>
+      </div>
+    </div>
+    <div style="max-width: 1280px; margin: 0 auto; padding-top: 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: rgba(233,223,201,0.5);">
+      <span>© 2026 Alejandro's Bar &amp; Restaurant. {{ t.footer.rights }}</span>
+      <button onClick="{{ toggleLang }}" style="background: none; border: none; color: rgba(233,223,201,0.6); font-size: 12.5px; cursor: pointer; text-decoration: underline;">{{ otherLang === 'ES' ? 'Ver en Español' : 'View in English' }}</button>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'en' };
+
+  data = {
+    en: {
+      nav: { home: 'Home', about: 'Our Story', menu: 'Menu', contact: 'Contact', reserve: 'Reserve' },
+      hero: {
+        overline: 'FAMILY-RUN SINCE 1999 · LA ZENIA, COSTA BLANCA',
+        title: 'Sunshine on the Terrace, Soul in Every Dish',
+        subhead: "Mediterranean classics and international favourites, served with a smile on the La Zenia roundabout — the same warm welcome since 1999.",
+        cta1: 'Reserve a Table', cta2: 'See the Menu'
+      },
+      yearsLabel: 'Years, Family-Run', foundedLabel: 'The Year We Opened',
+      dishesTag: 'SIGNATURE DISHES',
+      dishesHeading: 'The Plates People Come Back For',
+      dishesSub: 'A handful of the dishes our regulars order on repeat, alongside a menu built for every craving.',
+      dishes: [
+        { num: '01', name: 'Lasagna Bolognese', desc: 'Layered and slow-baked the way nonna intended, bubbling under melted cheese.', price: '€13.50' },
+        { num: '02', name: 'Prawn Spaghetti', desc: 'A generous plate of king prawns tossed in garlic, chilli and white wine.', price: '€15.90' },
+        { num: '03', name: 'Fillet of Beef, Peppercorn Sauce', desc: 'A generous beef fillet with fries and sautéed vegetables.', price: '€31.50' },
+        { num: '04', name: 'Apple Strudel', desc: 'Warm pastry, cinnamon apple and a scoop of vanilla ice cream.', price: '€6.50' }
+      ],
+      whyTag: "WHY ALEJANDRO'S",
+      whyHeading: 'Four Reasons Regulars Never Leave',
+      why: [
+        { mark: '99', title: 'Three Generations, One Kitchen', desc: 'Founded in 1999 and still family-run today — the recipes, the warmth and much of the staff have barely changed.' },
+        { mark: '★', title: 'Mediterranean Meets International', desc: 'From Spanish tapas to Austrian schnitzel, Italian pasta to British classics — built for every table.' },
+        { mark: '♪', title: 'Live Music, Every Weekend', desc: 'Spanish guitar and soulful vocals turn dinner into a proper night out, Friday and Saturday.' },
+        { mark: '☀', title: 'The Best Seat on the Roundabout', desc: 'Our sun-trap terrace is made for people-watching, sundowners, and lingering long after dessert.' }
+      ],
+      aboutTag: 'SINCE 1999',
+      aboutTitle: 'A Family Table in the Heart of La Zenia',
+      aboutBody: "What started as one family's dream on the La Zenia roundabout has grown into a Costa Blanca institution — without losing an ounce of its original warmth. Many of our staff have stayed for over a decade, which is why the welcome feels less like service, and more like coming home.",
+      aboutCta: 'Read Our Story',
+      specialsTag: 'THIS WEEK', specialsTitle: 'Something New Every Week',
+      specialsBody: "From golden schnitzel to the day's freshest catch, our kitchen builds a rotating specials board around what's in season. Ask your server what's on today.",
+      specialsCta: 'View Full Menu',
+      musicTag: 'FRI & SAT NIGHTS', musicTitle: 'Live Music, Weekend Nights',
+      musicBody: 'Spanish singers and guitarists take the terrace stage every Friday and Saturday evening, turning dinner into a proper night out.',
+      musicCta: 'Plan Your Visit',
+      reviewsTag: 'GUEST REVIEWS',
+      reviewsHeading: 'What Keeps Them Coming Back',
+      reviews: [
+        { quote: "We've been coming back for over a decade — the food, the service and the atmosphere never miss.", name: 'Google Guest', source: 'Google Reviews' },
+        { quote: "Live music, generous portions and a warm welcome from a team that's clearly been together for years.", name: 'TripAdvisor Guest', source: 'TripAdvisor' },
+        { quote: 'Our go-to spot near the roundabout for sundowners and a proper meal — book ahead, it fills up fast.', name: 'Google Guest', source: 'Google Reviews' }
+      ],
+      instaTag: 'FOLLOW ALONG', instaHeading: 'Follow the Feast',
+      instaSub: 'Daily specials, live music nights and behind-the-scenes moments.',
+      instaCta: 'Follow @alejandrosrestaurant',
+      locationTag: 'FIND US', locationHeading: 'On the La Zenia Roundabout',
+      addressTitle: 'Getting Here', hoursTitle: 'Opening Hours',
+      hours: [
+        { d: 'Monday – Thursday', h: '9:00 – 23:00' },
+        { d: 'Friday – Saturday', h: '9:00 – 00:00 · Live music from 21:30' },
+        { d: 'Sunday', h: '9:00 – 23:00 · Sunday Roast' }
+      ],
+      callBtn: 'Call Now', whatsappBtn: 'WhatsApp Us',
+      ctaHeading: 'Your Table Is Waiting', ctaSub: 'Join us for Mediterranean classics, cocktails on the terrace, and live music most weekends.',
+      ctaBtn1: 'Reserve Now', ctaBtn2: 'Call +34 966 760 623',
+      footer: { tag: 'Family-run on the La Zenia roundabout since 1999.', nav: 'Explore', visit: 'Visit Us', follow: 'Follow Along', rights: 'All rights reserved.' }
+    },
+    es: {
+      nav: { home: 'Inicio', about: 'Nuestra Historia', menu: 'Carta', contact: 'Contacto', reserve: 'Reservar' },
+      hero: {
+        overline: 'NEGOCIO FAMILIAR DESDE 1999 · LA ZENIA, COSTA BLANCA',
+        title: 'Sol en la Terraza, Alma en Cada Plato',
+        subhead: 'Clásicos mediterráneos y platos internacionales, servidos con una sonrisa en la rotonda de La Zenia — la misma calidez desde 1999.',
+        cta1: 'Reservar Mesa', cta2: 'Ver la Carta'
+      },
+      yearsLabel: 'Años en Familia', foundedLabel: 'El Año que Abrimos',
+      dishesTag: 'PLATOS ESTRELLA',
+      dishesHeading: 'Los Platos a los que Siempre Vuelven',
+      dishesSub: 'Algunos de los platos que nuestros clientes habituales piden una y otra vez.',
+      dishes: [
+        { num: '01', name: 'Lasaña Bolognesa', desc: 'Capas horneadas a fuego lento como manda la tradición, cubiertas de queso fundido.', price: '13,50€' },
+        { num: '02', name: 'Espaguetis con Gambas', desc: 'Un generoso plato de langostinos salteados con ajo, guindilla y vino blanco.', price: '15,90€' },
+        { num: '03', name: 'Solomillo, Salsa de Pimienta', desc: 'Un generoso solomillo con patatas fritas y verduras salteadas.', price: '31,50€' },
+        { num: '04', name: 'Strudel de Manzana', desc: 'Hojaldre caliente, manzana con canela y una bola de helado de vainilla.', price: '6,50€' }
+      ],
+      whyTag: "POR QUÉ ALEJANDRO'S",
+      whyHeading: 'Cuatro Razones para no Irse Nunca',
+      why: [
+        { mark: '99', title: 'Tres Generaciones, Una Cocina', desc: 'Fundado en 1999 y aún familiar hoy — las recetas, la calidez y gran parte del equipo apenas han cambiado.' },
+        { mark: '★', title: 'Mediterránea e Internacional', desc: 'De tapas españolas a schnitzel austríaco, pasta italiana a clásicos británicos — para cada mesa.' },
+        { mark: '♪', title: 'Música en Vivo Cada Fin de Semana', desc: 'Guitarra española y voces con alma convierten la cena en una auténtica noche, viernes y sábado.' },
+        { mark: '☀', title: 'El Mejor Sitio de la Rotonda', desc: 'Nuestra terraza soleada es perfecta para ver pasar la vida, tomar algo y alargar la sobremesa.' }
+      ],
+      aboutTag: 'DESDE 1999',
+      aboutTitle: 'Una Mesa Familiar en el Corazón de La Zenia',
+      aboutBody: 'Lo que empezó como el sueño de una familia en la rotonda de La Zenia se ha convertido en una institución de la Costa Blanca — sin perder ni un ápice de su calidez original. Muchos de nuestro equipo llevan más de una década con nosotros, por eso la bienvenida se siente como llegar a casa.',
+      aboutCta: 'Descubre Nuestra Historia',
+      specialsTag: 'ESTA SEMANA', specialsTitle: 'Algo Nuevo Cada Semana',
+      specialsBody: 'Del schnitzel dorado a la pesca más fresca del día, nuestra cocina crea una pizarra de especiales según la temporada. Pregunta a tu camarero qué hay hoy.',
+      specialsCta: 'Ver la Carta Completa',
+      musicTag: 'VIERNES Y SÁBADOS', musicTitle: 'Música en Vivo los Fines de Semana',
+      musicBody: 'Cantantes y guitarristas españoles suben al escenario de la terraza cada viernes y sábado, convirtiendo la cena en una auténtica noche de fiesta.',
+      musicCta: 'Planea tu Visita',
+      reviewsTag: 'OPINIONES',
+      reviewsHeading: 'Por Qué Siempre Vuelven',
+      reviews: [
+        { quote: 'Llevamos más de una década viniendo — la comida, el servicio y el ambiente nunca fallan.', name: 'Cliente de Google', source: 'Google Reviews' },
+        { quote: 'Música en vivo, raciones generosas y una bienvenida cálida de un equipo que lleva años junto.', name: 'Cliente de TripAdvisor', source: 'TripAdvisor' },
+        { quote: 'Nuestro sitio de referencia junto a la rotonda para tomar algo y comer bien — reserva con antelación.', name: 'Cliente de Google', source: 'Google Reviews' }
+      ],
+      instaTag: 'SÍGUENOS', instaHeading: 'Sigue el Sabor',
+      instaSub: 'Especiales diarios, noches de música en vivo y momentos entre bastidores.',
+      instaCta: "Seguir @alejandrosrestaurant",
+      locationTag: 'FIND US', locationHeading: 'En la Rotonda de La Zenia',
+      addressTitle: 'Cómo Llegar', hoursTitle: 'Horario',
+      hours: [
+        { d: 'Lunes – Jueves', h: '9:00 – 23:00' },
+        { d: 'Viernes – Sábado', h: '9:00 – 00:00 · Música en vivo desde las 21:30' },
+        { d: 'Domingo', h: '9:00 – 23:00 · Asado Dominical' }
+      ],
+      callBtn: 'Llamar Ahora', whatsappBtn: 'Escríbenos por WhatsApp',
+      ctaHeading: 'Tu Mesa te Espera', ctaSub: 'Ven a disfrutar de clásicos mediterráneos, cócteles en la terraza y música en vivo casi todos los fines de semana.',
+      ctaBtn1: 'Reservar Ahora', ctaBtn2: 'Llamar +34 966 760 623',
+      footer: { tag: 'Un negocio familiar en la rotonda de La Zenia desde 1999.', nav: 'Explorar', visit: 'Visítanos', follow: 'Síguenos', rights: 'Todos los derechos reservados.' }
+    }
+  };
+
+  toggleLang = () => this.setState(s => ({ lang: s.lang === 'en' ? 'es' : 'en' }));
+
+  renderVals() {
+    const t = this.data[this.state.lang];
+    const marqueeBase = [t.yearsLabel + ' 1999', t.dishesTag, t.whyTag, t.musicTag, t.specialsTag, t.reviewsTag];
+    return {
+      t,
+      lang: this.state.lang,
+      otherLang: this.state.lang === 'en' ? 'ES' : 'EN',
+      toggleLang: this.toggleLang,
+      marqueeItems: marqueeBase.concat(marqueeBase)
+    };
+  }
+}
+
+</script>
+</body>
+</html>
